@@ -67,10 +67,10 @@ This instruction compares 3 cells from the top part of the memory. It compares
 the first and the second cell and checks if they are equal. If equal, it jumps  
 to the label of the third cell. The 2 cells are to the right of the pointer.
 
-`$    “JUMP”`
+`$    “JUMP”`  
 This jumps to the label defined in the current top cell.  
 
-`|    “DEFINE LABEL”`
+`|    “DEFINE LABEL”`  
 Instead of jumping to a specific place in memory or the beginning of a while loop,  
 CINS has labels that are defined throughout the code. The labels are referenced  
 to by their occurrence within the program code. This defines a label.  
