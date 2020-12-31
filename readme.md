@@ -3,10 +3,11 @@
 *December 2020*
 
 ## Abstract
-Cryptic Instruction (CINS) is an esoteric programming language based on BrainF\*ck and  
-designed to mimic modern assembly and computer architecture. It is designed to be a “better” and  
-more practical BrainF\*ck, while still maintaining the minimalist design. This document will describe how CINS works,  
-why it works, and why I created it, as well as the function of each command in detail.
+Cryptic Instruction (CINS) is an esoteric programming language based on  
+BrainF\*ck and designed to mimic modern assembly and computer architecture. 
+It is designed to be a “better” and more practical BrainF\*ck, while still  
+maintaining the minimalist design. This document will describe how CINS works,  
+why it works, and why I created it, as well as the function of each command in detail.  
 
 ## Introduction
 CINS has sixteen instructions. Six of the instructions in CINS are based on BrainF\*ck, for familiarity.  
