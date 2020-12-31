@@ -36,12 +36,14 @@ v    Copy current value from top pointer to bottom
 These allow cells to be copied easily, and opens up a lot of possibilities for optimizations and features in an assembler.  
 
 Increment/Decrement Instructions
+```
 +    Add 1 to current bottom cell
 -    Subtract 1 from current bottom cell
 *    Add 5 to current bottom cell
 %    Add 50 to current bottom cell
+```
 
-The ‘*’ and ‘%’ instructions seem to be insignificant and maybe even necessary, yet they are essential for generating  
+The ‘\*’ and ‘%’ instructions seem to be insignificant and maybe even necessary, yet they are essential for generating  
 sane code output, as CINS does not have a “while not zero” loop for quick multiplication.  
 Consider these examples (counting to 16):
 
