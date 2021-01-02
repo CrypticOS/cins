@@ -64,9 +64,14 @@ ith logic and jumping. BrainF\*ck logic only has basic WHILE TRUE loops,
 nd cannot dynamically jump anywhere in the code.  
 
 `?    “IF EQUAL THEN GOTO”`  
-This instruction compares 3 cells from the top part of the memory. It compares  
-the first and the second cell and checks if they are equal. If equal, it jumps  
-to the label of the third cell. The 2 cells are to the right of the pointer.
+This instruction compares 2 cells from the top part of the memory.  
+It jumps to label ID in the first cell if the two following cells to the right  
+are equal (==).
+```
+; If 1 == 1, jump to label 2
+; (Spaced for readability)
+inl "dd !+^a !+^a !++^ ?"
+```
 
 `$    “JUMP”`  
 This jumps to the label defined in the current top cell.  
