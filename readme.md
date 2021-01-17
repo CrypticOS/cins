@@ -110,4 +110,7 @@ This will show several snippets that would be used often in an assembler for CIN
 3. Write second value, move up (^), left 2 times (aa)
 4. Compare (?)
 
-*Note: the official order of these instructions are `!%*+-<>ad^v.,$?|`*
+## Notes
+- The official order of these instructions are `!%*+-<>ad^v.,$?|`
+- Since there are 16 instructions, you can store 2 instructions
+in 1 byte with some clever bit shifting.
