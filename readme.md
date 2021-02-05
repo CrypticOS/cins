@@ -13,6 +13,7 @@ why it works, and why I created it, as well as the function of each command in d
 ## Introduction
 CINS has sixteen instructions. Six of the instructions in CINS are based on BrainF\*ck,  
 for familiarity. It is designed to be as simple as BrainF\*ck, but be even more powerful.  
+
 Although they are representable with digits 1-16, sixteen ASCII characters were chosen  
 to make programs easier to visualize.
 
@@ -48,8 +49,8 @@ Increment/Decrement Instructions
 %    Add 50 to current bottom cell
 ```
 
-The ‘\*’ and ‘%’ instructions seem to be insignificant and maybe even necessary,  
-yet they are essential for generating sane code output, as CINS does not have a  
+The ‘\*’ and ‘%’ instructions may seem to be insignificant and maybe even unnecessary,  
+yet they are essential for generating sane output, as CINS does not have a  
 “while not zero” loop for quick multiplication.  
 Consider these examples (counting to 16):
 
@@ -59,28 +60,27 @@ BrainF\*ck        CINS (just plus)      CINS
 ```
 
 ## Logic Instructions
-One of the most notable differences between CINS and BrainF\*ck is  
-ith logic and jumping. BrainF\*ck logic only has basic WHILE TRUE loops,  
-nd cannot dynamically jump anywhere in the code.  
+The second most important difference between CINS and BrainF\*ck are their logic and  
+jumping instructions. BrainF\*ck only has WHILE TRUE loops, and cannot goto a specific part of the code.  
+
+`|    “DEFINE LABEL”`  
+Instead of jumping to a defined location in memory or the beginning of a while loop,  
+CINS has labels that are defined throughout the code. The labels are referenced  
+to by their occurrence within the program code. This defines a label.  
+Jumping to it will start to execute the instructions directly beside it.  
 
 `?    “IF EQUAL THEN GOTO”`  
 This instruction compares 2 cells from the top part of the memory.  
 It jumps to label ID in the first cell if the two following cells to the right  
 are equal (==).
 ```
-; If 1 == 1, jump to label 2
+; If 1 == 1, jump to the second label
 ; (Spaced for readability)
-inl "dd !+^a !+^a !++^ ?"
+inl "dd !+^a !+^a !+^ ?"
 ```
 
 `$    “JUMP”`  
 This jumps to the label defined in the current top cell.  
-
-`|    “DEFINE LABEL”`  
-Instead of jumping to a specific place in memory or the beginning of a while loop,  
-CINS has labels that are defined throughout the code. The labels are referenced  
-to by their occurrence within the program code. This defines a label.  
-Jumping to it will start to execute the instructions directly beside it.  
 
 ## Input/Output
 IO is the same as BrainF\*ck.
